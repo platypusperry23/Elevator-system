@@ -1,1 +1,122 @@
-<mxfile host="app.diagrams.net" modified="2023-02-02T05:17:02.367Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.15" etag="JEBfRGTrUc_bN4Km1svK" type="github"><diagram name="Page-1" id="imcHHYVBSS_lUB1NXaxz">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-02-02T08:05:53.854Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="qFzFU_D0MBAAjdNK1Npp" version="20.8.15" type="github">
+  <diagram name="Page-1" id="imcHHYVBSS_lUB1NXaxz">
+    <mxGraphModel dx="2872" dy="1294" grid="1" gridSize="13" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-6" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="65" y="89" as="sourcePoint" />
+            <mxPoint x="130" y="89" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;entryX=0.56;entryY=-0.046;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="zc_TDiuTHcInc-l8dcYw-7" target="zc_TDiuTHcInc-l8dcYw-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="416" y="156" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="416" y="145" />
+              <mxPoint x="151" y="145" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;" edge="1" parent="1" source="zc_TDiuTHcInc-l8dcYw-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="702" y="169" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-13" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;In the background this api creates&lt;br&gt;&amp;nbsp;a new&amp;nbsp;&lt;/font&gt;" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=15;fontFamily=Architects Daughter;" vertex="1" connectable="0" parent="zc_TDiuTHcInc-l8dcYw-12">
+          <mxGeometry x="1" y="-3" relative="1" as="geometry">
+            <mxPoint x="-10" y="33" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-7" value="API to initialize the elevator service with the elevator-count&lt;br&gt;[POST]elevator-service/init?elevator_count=&#39;&#39;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=20;fontFamily=Architects Daughter;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="130" y="56" width="572" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-11" value="This api returns a the id of the new elevator service&amp;nbsp;&lt;br&gt;with the count of elevators and date and time of creation&lt;br&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=20;fontFamily=Architects Daughter;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="-169" y="169" width="572" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-17" value="In the background this api create a new set of elevators in&lt;br&gt;the primary table with all the details" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=20;fontFamily=Architects Daughter;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="689" y="169" width="585" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-20" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="-760" y="317.73" as="sourcePoint" />
+            <mxPoint x="-682" y="317.73" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-22" value="An api that returns all the request that&lt;br&gt;are received by an elevator&lt;br&gt;&lt;div style=&quot;&quot;&gt;[GET]elevator-service/api/{elevator_id}/requests&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=20;fontFamily=Architects Daughter;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="-682" y="273" width="494" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-23" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="-782" y="447.73" as="sourcePoint" />
+            <mxPoint x="-682" y="447.73" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-24" value="Fetch the next destination &lt;br&gt;floor for a given elevator&amp;nbsp;&lt;br&gt;[GET]elevator-service/api/{elevator_id}/destination" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=20;fontFamily=Architects Daughter;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="-682" y="403" width="507" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-25" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="-782" y="577.73" as="sourcePoint" />
+            <mxPoint x="-682" y="577.73" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-26" value="Fetch if an elevator is moving&lt;br&gt;up or down&lt;br&gt;[GET}elevator-service/api/{elevator_id}/direction" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=20;fontFamily=Architects Daughter;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="-682" y="533" width="481" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-28" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="-782" y="702" as="sourcePoint" />
+            <mxPoint x="-682" y="702" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-30" value="Saves the user requests to the list of request&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;for the elevator&lt;br&gt;&lt;/span&gt;[POST]elevator-service/api/{elevator_id}/request/save" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=20;fontFamily=Architects Daughter;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="-682" y="654" width="546" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-31" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="-782" y="806" as="sourcePoint" />
+            <mxPoint x="-682" y="806" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-32" value="Update the state of an elevator&lt;br&gt;based on the input&lt;br&gt;[PUT]elevator-service/api/{elevator_id}/state/&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=20;fontFamily=Architects Daughter;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="-682" y="767" width="468" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-33" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="-782" y="923" as="sourcePoint" />
+            <mxPoint x="-682" y="923" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-34" value="an api that tell the elevator to&lt;br&gt;&amp;nbsp;open /close door&lt;br&gt;[POST] elevator-service/api/{elevator_id}/door/&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=20;fontFamily=Architects Daughter;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="-682" y="884" width="481" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-35" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Elevator-Service&lt;br&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;id -&amp;gt; PK&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;created_at&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;modified_at&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;elevator-count&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;is_active&lt;/li&gt;&lt;/ul&gt;&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="156" y="279" width="143" height="169" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-36" value="" style="endArrow=classic;html=1;rounded=0;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;entryX=0.083;entryY=0.087;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="zc_TDiuTHcInc-l8dcYw-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="258" y="351" as="sourcePoint" />
+            <mxPoint x="425" y="351" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="338" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-37" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="520" y="373.5" width="169" height="237.5" as="geometry" />
+        </mxCell>
+        <mxCell id="zc_TDiuTHcInc-l8dcYw-38" value="Elevators&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;" vertex="1" parent="1">
+          <mxGeometry x="547" y="403" width="117" height="39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

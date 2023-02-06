@@ -25,13 +25,19 @@ class DestinationAPI(ElevatorAPIView):
         """
         # TODO: Add redis use-case also
 
-        destination = Elevator.objects.filter(elevator_id=elevator_id).values('destination_floor').first()
+        destination = Elevator.objects.filter(elevator_id=elevator_id).values('destination_floor', 'is_moving').first()
 
-        if destination['destination_floor']:
+        if destination['destination_floor'] and destination['is_moving']:
             response = {
                 "Floor": destination['destination_floor'],
                 "Message": f"Elevator {elevator_id}' is heading to {destination['destination_floor']} floor"
             }
+        elif destination['destination_floor']:
+            response = {
+                "Floor": destination['destination_floor'],
+                "Message": f"Elevator {elevator_id}' last headed to {destination['destination_floor']} floor"
+            }
+
         else:
             response = {
                 "Message": f'No destination floor found for elevator {elevator_id} Pls check id'
@@ -157,6 +163,8 @@ class DestinationFloorAPI(ElevatorAPIView):
                 logger.info(f'Elevator {elevator_id} is going up')
                 elevator.destination_floor = to_floors[0]
                 # considering it reaches all the floor instantly :-)
+                # TODO: add an async function that would wait for 5 seconds to before updating the current_floor so
+                #  that the we can show that lift is moving for that duration.
                 elevator.current_floor = to_floors[0]
             else:
                 elevator.destination_floor = to_floors[-1]

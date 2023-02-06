@@ -9,6 +9,9 @@ from webapp.elevator.models import Elevator, UserRequests
 class AllElevatorRequests(ElevatorAPIView):
 
     def get(self, request, elevator_id: int):
+        """
+        A GET request api that returns all the request which has been received by the elevator
+        """
         try:
             elevator = Elevator.objects.filter(elevator_id=elevator_id).values('user_requests').first()
             if not elevator['user_requests']:

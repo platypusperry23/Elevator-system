@@ -19,7 +19,8 @@ class InitializationAPI(ElevatorAPIView):
     @validate_request(InitializationSerializer)
     def post(self, request, *args, **kwargs):
         """
-        API takes number of elevators as an inputs and creates that many elevators
+        API takes number of elevators as an inputs and creates that many elevators and if there are earlier elevators
+        then they are deleted.
         """
         validated_data = kwargs['validated_data']
         elevator_count = validated_data['elevator_count']

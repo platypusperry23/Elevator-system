@@ -20,7 +20,9 @@ elevator_service = ElevatorService
 class DestinationAPI(ElevatorAPIView):
 
     def get(self, request, elevator_id: int):
-
+        """
+        Get api that tells in which direction the elevator is moving
+        """
         # TODO: Add redis use-case also
 
         destination = Elevator.objects.filter(elevator_id=elevator_id).values('destination_floor').first()
@@ -38,6 +40,11 @@ class DestinationAPI(ElevatorAPIView):
 
 
 class DirectionAPI(ElevatorAPIView):
+    """
+    An api which tells in which direction the lift is moving.
+    And since we are assuming that floors are reached instantly so mostly this api would return lift is not moving.
+
+    """
 
     def get(self, request, elevator_id: int):
 
@@ -65,6 +72,11 @@ class StateUpdateAPI(ElevatorAPIView):
     ])
 
     def put(self, request, elevator_id: int):
+        """
+        This is put api which is to be used by the management to update the current state of the lift
+        ACTIVE, INACTIVE , DEPRECATED, UNDER_MAINTENANCE
+        :return:
+        """
         try:
             serializer = StateUpdateSerializer(data=request.data)
             if not serializer.is_valid():
@@ -88,6 +100,10 @@ class DoorStatusAPI(ElevatorAPIView):
     ])
 
     def put(self, request, elevator_id: int):
+        """
+        A put api that updates the door status based on user request.
+        Allowed values are OPEN and CLOSE.
+        """
 
         try:
             serializer = DoorStatusSerializer(data=request.data)
@@ -117,6 +133,11 @@ class DestinationFloorAPI(ElevatorAPIView):
 
     @validate_request(DestinationRequestSerializer)
     def post(self, request, **kwargs):
+        """
+            This is a post api which is used to select the floor at which we would want to go.
+            Since at a time multiple people can enter the lift so they can select multiple row.
+            The api decides which direction the lift should to move
+        """
         try:
             to_floors = kwargs['validated_data']['destination']
             elevator_id = kwargs['validated_data']['elevator_id']
@@ -126,6 +147,9 @@ class DestinationFloorAPI(ElevatorAPIView):
                 return Response(data={
                     "message": "No elevator found with this id. Kindly check again"}, status=400)
             current_floor = elevator.current_floor
+            # usually the first pressed button decides the direction of the lift. we can also choose the first
+            # the first input as the param that decides which side to move.
+            # here i have done this but the closest_floor though.
             closest_floor = elevator_service.closest_floor(to_floors, current_floor)
             to_floors.sort()
 
@@ -153,12 +177,17 @@ class DestinationFloorAPI(ElevatorAPIView):
 class AssignElevatorAPI(ElevatorAPIView):
 
     def get(self, request, current_floor: int):
-
+        """
+        This is a get API which is used to assign an elevator to a user based on which floor the user is
+        the api first checks which all api's are free to take requests and then based on those it checks which one is
+        the closest and assigns that one to the user. After this point the elevator is put into is_moving
+        state until it has reached the destination requested by the user.
+        """
         try:
             closest_elevator = Elevator.objects.filter(is_moving=False, state=Elevator.ACTIVE).order_by(
                 Abs(F('current_floor') - current_floor)).first()
             if not closest_elevator:
-                # TODO: add a function that checks every second to assign the elevator
+                # TODO: add a async function that checks every second to assign the elevator
                 return Response(data={
                     "message": "No available elevator kindly wait!!"
                 }, status=200)
